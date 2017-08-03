@@ -1,0 +1,16 @@
+installing a software
+=====================================
+sudo apt-get install <software>
+
+
+uninstalling a software
+=====================================
+sudo apt-get remove <software>
+
+Update your system
+=======================================
+sudo apt-get update
+
+
+
+

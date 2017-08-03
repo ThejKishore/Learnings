@@ -1,0 +1,9 @@
+echo "options iwlwifi 11n_disable=1" | sudo tee /etc/modprobe.d/iwlwifi.conf
+sudo modprobe -rfv iwldvm
+sudo modprobe -rfv iwlwifi
+sudo modprobe -v iwlwifi
+
+
+echo "options iwl3945 disable_hw_scan=1" | sudo tee /etc/modprobe.d/iwl3945 .conf
+sudo modprobe -rfv iwl3945
+sudo modprobe -v  iwl3945

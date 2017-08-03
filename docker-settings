@@ -1,0 +1,32 @@
+
+Installing Docker compose
+========================================
+
+sudo apt-get install docker-compose
+
+
+
+
+Insalling Docker Machine IP
+=================================
+curl -L https://github.com/docker/machine/releases/download/v0.12.2/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine &&
+chmod +x /tmp/docker-machine &&
+sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
+
+
+
+https://github.com/sameersbn/docker-redis/blob/master/docker-compose.yml
+
+
+========================
+sudo docker-compose up -d
+sudo docker-compose ps
+sudo docker-machine
+
+
+Name             Command             State              Ports
+-------------------------------------------------------------------------
+thej_redisBanner   redis-commander    Up                 0.0.0.0:9002->80
+_1                 --redis-ho ...                        81/tcp
+thej_redis_1       /sbin/entrypoint   Up                 0.0.0.0:9001->63
+             .sh                                   79/tcp

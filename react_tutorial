@@ -1,0 +1,9 @@
+superagent -- http api
+
+
+
+http://www.omdbapi.com?s=star&r=json
+
+
+Request.get().then((response)=>{
+});

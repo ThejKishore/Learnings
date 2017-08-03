@@ -1,0 +1,81 @@
+
+down vote
+accepted
+
+
+Referring to Ask Ubuntu question How to set JAVA_HOME for OpenJDK?,
+
+How to install "Open JDK" (Java developement kit) in Ubuntu (Linux)?
+
+Open Applicaction -> Accessories -> Terminal
+
+Type commandline as below...
+
+sudo apt-get install openjdk-8-jdk
+
+Type commandline as below...
+
+apt-cache search jdk
+
+(Note: openjdk-8-jdk is symbolically used here. You can choose the JDK version as per your requirement.)
+
+For "JAVA_HOME" (Environment Variable) type command as shown below, in "Terminal" using your installation path...
+
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+
+(Note: "/usr/lib/jvm/java-7-openjdk" is symbolically used here just for demostration. You should use your path as per your installation.)
+
+For "PATH" (Environment Variable) type command as shown below, in "Terminal" using your installation path...
+
+export PATH=$PATH:/usr/lib/jvm/java-8-openjdk/bin
+
+(Note: "/usr/lib/jvm/java-7-openjdk" is symbolically used here just for demostration. You should use your path as per your installation.)
+
+Check for "open jdk" installation, just type command in "Terminal" as shown below
+
+javac -version
+
+shareimprove this answer
+
+Step 3: Download Gradle
+
+Gradle distribution archive comes in two types: "binary-only" and "complete". The "binary-only" archive contains the Gradle software only wheres "complete" archive comes with binary, documentation and source. Run the following command to download Gradle to your system.
+
+wget https://services.gradle.org/distributions/gradle-3.4.1-bin.zip
+
+You can always check the Gradle release page to look for the link to the latest version of Gradle.
+Step 4: Install Gradle
+
+Create a directory for the Gradle installation.
+
+sudo mkdir /opt/gradle
+
+Extract the downloaded archive to the newly created directory.
+
+sudo unzip -d /opt/gradle gradle-3.4.1-bin.zip
+
+Configure the PATH environment variable so that the gradle executable can be directly executed anywhere on the system.
+
+export PATH=$PATH:/opt/gradle/gradle-3.5/bin
+
+You can run the following command to check if the Gradle install was successful.
+
+gradle -v
+
+You should see the following output.
+
+------------------------------------------------------------
+Gradle 3.4.1
+------------------------------------------------------------
+
+Build time:   2017-03-03 19:45:41 UTC
+Revision:     9eb76efdd3d034dc506c719dac2955efb5ff9a93
+
+Groovy:       2.4.7
+Ant:          Apache Ant(TM) version 1.9.6 compiled on June 29 2015
+JVM:          1.8.0_121 (Oracle Corporation 25.121-b13)
+OS:           Linux 4.8.0-41-generic amd64
+
+The installation is complete. Your system is now ready to build programs using Gradle.
+Want to contribute ?
+

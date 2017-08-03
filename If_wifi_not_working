@@ -1,0 +1,18 @@
+ctrl+alt+t
+*Ignore file not found on errors..
+
+sudo apt-get remove --purge broadcom-kernel-source
+sudo rm -rf bcma
+
+// software update ...
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt-get autoremove
+sudo apt-get autoclean
+
+// Then install wl driver
+sudo apt-get install --reinstall broadcom-kernel-source
+sudo modprobe -v wl
+
+============worked solution===================
+sudo tee /etc/modprobe.d/blacklist-acer.conf <<< "blacklist acer_wmi"
